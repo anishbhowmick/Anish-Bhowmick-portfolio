@@ -3,6 +3,11 @@ import { Code } from 'lucide-react';
 
 const skills = [
   {
+    category: "Languages & Fundamentals",
+    skills: ["Python", "Data Structures", "Algorithms"],
+    color: "from-blue-500 to-cyan-500"
+  },
+  { 
     category: "Frontend",
     skills: ["React", "TypeScript", "Tailwind CSS", "Next.js"],
     color: "from-blue-500 to-cyan-500"
