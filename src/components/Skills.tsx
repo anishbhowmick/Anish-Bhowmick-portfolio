@@ -9,12 +9,12 @@ const skills = [
   },
   {
     category: "Backend",
-    skills: ["Node.js", "Python", "PostgreSQL", "AWS"],
+    skills: ["Node.js", "Python", "MongoDB"],
     color: "from-purple-500 to-pink-500"
   },
   {
     category: "Tools",
-    skills: ["Git", "Docker", "Jest", "CI/CD"],
+    skills: ["Git", "Matlab"],
     color: "from-orange-500 to-red-500"
   }
 ];
