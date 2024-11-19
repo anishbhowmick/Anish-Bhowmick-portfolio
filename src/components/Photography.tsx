@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
 import { Camera, ChevronRight } from 'lucide-react';
 import PhotoGalleryModal from './PhotoGalleryModal';
+import hot_brew from "../assets/images/hot_brew.jpg"
+import billi from "../assets/images/billi.jpg"
+import furry_friend from "../assets/images/furry_friend_2.jpg"
+import durga_puja_2 from "../assets/images/durga_puja_2.png"
+
 
 const photos = [
   {
-    url: "https://images.unsplash.com/photo-1731228069233-000260367c6d?q=80&w=1956&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "Hot Brew"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1731228224755-a9ddcfedb35e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8fA%3D%3D",
+    src: billi,
     title: "Felis catus"
   },
   {
-    url: "https://images.unsplash.com/photo-1731228235215-c3f36060e25b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8fA%3D%3D",
+    src: durga_puja_2,
+    title: "Divine"
+  },
+  {
+    src: furry_friend,
     title: "Furry Friend"
   }
 ];
@@ -33,10 +38,10 @@ export default function Photography() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {photos.map((photo) => (
-              <div key={photo.url} className="group relative overflow-hidden rounded-2xl">
+              <div key={photo.src} className="group relative overflow-hidden rounded-2xl">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                 <img 
-                  src={`${photo.url}?auto=format&fit=crop&q=80`} 
+                  src={`${photo.src}?auto=format&fit=crop&q=80`} 
                   alt={photo.title}
                   className="w-full aspect-[3/4] object-cover transform transition-transform duration-700 group-hover:scale-110"
                 />

@@ -1,8 +1,16 @@
 import React from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import hot_brew from "../assets/images/hot_brew.jpg"
+import billi from "../assets/images/billi.jpg"
+import furry_friend from "../assets/images/furry_friend_2.jpg"
+import mountain_friend from "../assets/images/furry_friend.jpg"
+import landscape from "../assets/images/landscape_1.jpg"
+import landscape_2 from "../assets/images/landscape_2.jpg"
+import railway from "../assets/images/railway_station.jpg"
+import durga_puja_1 from "../assets/images/durga_pujo_1.png"
 
 interface Photo {
-  url: string;
+  source: string;
   title: string;
   description?: string;
 }
@@ -16,34 +24,44 @@ interface PhotoGalleryModalProps {
 
 const galleryPhotos: Photo[] = [
   {
-    url: "https://images.unsplash.com/photo-1731228069233-000260367c6d?q=80&w=1956&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    source: durga_puja_1,
+    title: "Goddess Durga",
+    description: "Embrace the strength within, like the divine Maa Durga"
+  },
+  {
+    source: hot_brew,
     title: "Hot Brew",
     description: "Cup of happiness"
   },
   {
-    url: "https://images.unsplash.com/photo-1731228224755-a9ddcfedb35e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mnx8fGVufDB8fHx8fA%3D%3D",
+    source: billi,
     title: "Felis catus",
     description: "Adorable meowing friend"
   },
   {
-    url: "https://images.unsplash.com/photo-1731228235215-c3f36060e25b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NHx8fGVufDB8fHx8fA%3D%3D",
+    source: furry_friend,
     title: "Furry Friend",
     description: "Peace. Love. Dogs."
   },
   {
-    url: "https://images.unsplash.com/photo-1731228096880-15730fa65b98?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NXx8fGVufDB8fHx8fA%3D%3D",
+    source: mountain_friend,
     title: "A Mountain Friend",
     description: "Beautiful view at the valley"
   },
   {
-    url: "https://images.unsplash.com/photo-1731228961749-e55d7de4d982?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8fA%3D%3D",
+    source: landscape,
     title: "Morning  Hills",
     description: "Golden hour over rolling hills"
   },
   {
-    url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
-    title: "Forest Canopy",
-    description: "Sunlight filtering through trees"
+    source: landscape_2,
+    title: "Classic Elegance",
+    description: "A Beautiful landscape"
+  },
+  {
+    source: railway,
+    title: "Railway Station",
+    description: "On the move"
   }
 ];
 
@@ -92,7 +110,7 @@ export default function PhotoGalleryModal({ isOpen, onClose, currentIndex, onNav
       <div className="relative z-40 max-w-7xl mx-auto px-4 py-8">
         <div className="relative">
           <img
-            src={`${photo.url}?auto=format&fit=crop&q=80`}
+            src={`${photo.source}?auto=format&fit=crop&q=80`}
             alt={photo.title}
             className="max-h-[80vh] object-contain mx-auto rounded-lg shadow-2xl"
           />

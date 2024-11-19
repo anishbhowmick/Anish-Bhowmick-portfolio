@@ -2,23 +2,21 @@ import React from 'react';
 import { Github, ExternalLink } from 'lucide-react';
 import sorting_visualizer from '../assets/images/sorting_visualizer_website_photo.png';
 import medical_website from '../assets/images/medical_website.png';
-// import ai_image_generator from '../assets/ai_image_generator.png';
 
 const projects = [
   {
     title: "Sorting Visualizer",
-    description: "A React application that provides real-time visualization of various sorting algorithms.",
+    description: "This application provides real-time visualization of various sorting algorithms.",
     image: sorting_visualizer,
-    tech: ["Data Structures and Algorithms", "React", "TypeScript", "Vite", "Tailwind CSS", "Lucide React"],
+    tech: ["Data Structures and Algorithms", "React", "TypeScript", "Vite", "Tailwind CSS"],
     github: "https://github.com/anishbhowmick/sorting-visualizer",
     live: "https://sorting-visualizer-pink-omega.vercel.app/"
   },
   {
     title: "Medical website",
-    description: "Developed an interactive website for Doctor & Patient",
+    description: "Developed an interactive website for Doctor & Patient, a convinient way to interact between doctor and patient.",
     image: medical_website,
-    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "Lucide React","Node.js","MongoDB"],
-    // github: "#",
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS","Node.js","MongoDB"],
     live: "https://medical-webpage-front.vercel.app/"
   }
 ];
@@ -44,7 +42,10 @@ export default function Projects() {
                     <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
                     <div className="flex gap-2">
                       {project.tech.map((tech) => (
-                        <span key={tech} className="px-3 py-1 bg-gray-800/80 backdrop-blur-sm rounded-full text-sm text-gray-300">
+                        <span
+                          key={tech}
+                          className="px-2 py-0.5 bg-gray-700 rounded text-xs text-gray-300"
+                        >
                           {tech}
                         </span>
                       ))}
@@ -54,15 +55,17 @@ export default function Projects() {
                 <div className="p-6">
                   <p className="text-gray-300 mb-4">{project.description}</p>
                   <div className="flex gap-4">
-                    <a 
-                      href={project.github} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
-                    >
-                      <Github size={20} />
-                      <span>Code</span>
-                    </a>
+                    {project.github && (
+                      <a 
+                        href={project.github} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                      >
+                        <Github size={20} />
+                        <span>Code</span>
+                      </a>
+                    )}
                     <a 
                       href={project.live} 
                       target="_blank" 
