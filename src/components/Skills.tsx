@@ -10,7 +10,7 @@ const skills = [
   { 
     category: "Frontend",
     skills: ["React", "TypeScript", "Tailwind CSS", "Next.js"],
-    color: "from-blue-500 to-cyan-500"
+    color: "from-green-500 to-lime-500"
   },
   {
     category: "Backend",
