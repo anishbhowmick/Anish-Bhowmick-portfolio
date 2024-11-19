@@ -40,7 +40,7 @@ export default function Hero() {
 
         <div className="flex items-center justify-center gap-3 mb-8">
           <Code size={24} className="text-blue-400" />
-          <p className="text-2xl text-blue-100 typing-effect">Full Stack Developer & Photography Enthusiast</p>
+          <p className="text-2xl text-blue-100 typing-effect">Software Developer & Photography Enthusiast</p>
         </div>
 
         <div className="flex flex-wrap gap-4 justify-center mb-16">

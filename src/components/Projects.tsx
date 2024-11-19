@@ -1,6 +1,7 @@
 import React from 'react';
 import { Github, ExternalLink } from 'lucide-react';
 import sorting_visualizer from '../assets/images/sorting_visualizer_website_photo.png';
+import medical_website from '../assets/images/medical_website.png';
 // import ai_image_generator from '../assets/ai_image_generator.png';
 
 const projects = [
@@ -8,18 +9,17 @@ const projects = [
     title: "Sorting Visualizer",
     description: "A React application that provides real-time visualization of various sorting algorithms.",
     image: sorting_visualizer,
-    // image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80",
-    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "Lucide React"],
+    tech: ["Data Structures and Algorithms", "React", "TypeScript", "Vite", "Tailwind CSS", "Lucide React"],
     github: "https://github.com/anishbhowmick/sorting-visualizer",
     live: "https://sorting-visualizer-pink-omega.vercel.app/"
   },
   {
-    title: "AI Image Generator",
-    description: "Developed an AI-powered image generation tool using Python and OpenAI API",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80",
-    tech: ["Python", "OpenAI", "Flask"],
-    github: "#",
-    live: "#"
+    title: "Medical website",
+    description: "Developed an interactive website for Doctor & Patient",
+    image: medical_website,
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "Lucide React","Node.js","MongoDB"],
+    // github: "#",
+    live: "https://medical-webpage-front.vercel.app/"
   }
 ];
 
